@@ -61,6 +61,7 @@ export default {
 }
 .foot{
   background-color:#171717 ;
+  height: 100px;
 }
 .foot>p{
   color: #8b8b8b;
