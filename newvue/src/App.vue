@@ -51,7 +51,6 @@ export default {
   margin: 15px auto;
   width: 95%;
   border-radius: 15px;
-  text-align: center;
 
 }
 .nav{
