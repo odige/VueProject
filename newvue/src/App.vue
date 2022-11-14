@@ -46,7 +46,7 @@ export default {
 <style>
 
 .head {
-  background-color: rgb(37, 42, 62, 0.8);
+  background-color: rgb(37, 42, 62, 0.9);
   height: 80px;
   margin: 15px auto;
   width: 95%;
@@ -57,8 +57,8 @@ export default {
 .nav{
   height: 80px;
 }
-body {
-  background-color: #172130;
+#app {
+  background-color: #171d2d;
 }
 .foot{
   background-color:#171717 ;
