@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <HelloWorld />
+  <router-view></router-view>
   <div class="text-center foot">
       <img src="" alt="">
       <p>@梁友欢/林泽铨/李西东/邬昆佑</p>
@@ -33,13 +33,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  
 }
 </script>
 
@@ -61,9 +58,18 @@ export default {
 }
 .foot{
   background-color:#171717 ;
+}
+.foot{
   height: 100px;
 }
 .foot>p{
   color: #8b8b8b;
+}
+li>a{
+  border-radius: 5px;
+  height: auto;
+}
+li>a:hover{
+  background-color: rgb(48, 58, 80,0.9);
 }
 </style>

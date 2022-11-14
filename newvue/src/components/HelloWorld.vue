@@ -34,7 +34,7 @@
     <div class="container">
       <h1 class="text-light">游戏</h1>
       <div class="row">
-        <div class="card col-3" v-for="item in game" :key="item">
+        <div class="card col-3" v-for="item in game" :key="item" @click="to">
           <img :src="item.game" class="card-img-top" alt="">
           <div class="card-img-overlay">
             <img :src="item.text" class="card-img-top" alt="">
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { _push } from "@/scripts/page";
 export default {
   name: 'HelloWorld',
   data(){
@@ -107,6 +108,11 @@ export default {
         type:"多人在线战术竞技游戏"
       }],
     }
+  },
+  methods:{
+    to:()=>{
+      _push(window, "login")
+    }
   }
 }
 </script>
@@ -127,12 +133,12 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
 
 h1 {
   margin: 50px;
+}
+h4{
+  font-weight:bold
 }
 
 .type{
