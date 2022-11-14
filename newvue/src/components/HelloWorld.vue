@@ -1,5 +1,5 @@
 <template>
-  <div>
+   <div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -17,7 +17,7 @@
           <img src="../img/poster2.png" class="d-block w-100" alt="">
         </div>
         <div class="carousel-item">
-          <img src="" class="d-block w-100" alt="">
+          <img src="../img/poster1.png" class="d-block w-100" alt="">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -34,19 +34,29 @@
   </div>
 </template>
 
-<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
 export default {
   name: 'HelloWorld',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  props: {
+    msg: String
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
 </style>
