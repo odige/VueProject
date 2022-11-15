@@ -1,14 +1,14 @@
 <template>
-  <div class="fixed-top head" v-if="!(path==='/login')">
+  <div class="fixed-top head" v-if="!(path==='/')">
     <div class="container">
       <div class="row">
-        <img src="" alt="" class="col-2">
-        <ul class="nav col-8 ">
+        <div class="col-1  nav flex-column justify-content-center"><img src="./img/logo2.png"></div>
+        <ul class="nav col-8  offset-1">
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" aria-current="page" href="#">商店</a>
+            <router-link class="nav-link text-light" aria-current="page" to="/home">商店</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" href="#">社群</a>
+            <a class="nav-link text-light" href="">社群</a>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
             <a class="nav-link text-light" href="#">关于</a>
@@ -19,14 +19,14 @@
         </ul>
         <ul class="nav col-1 offset-1">
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" href="#">账户</a>
+            <router-link class="nav-link text-light" to="/overview">账户</router-link>
           </li>
         </ul>
       </div>
     </div>
   </div>
   <router-view></router-view>
-  <div class="text-center foot" v-if="!(path==='/login')">
+  <div class="text-center foot" v-if="!(path==='/')">
       <img src="" alt="">
       <p>@梁友欢/林泽铨/李西东/邬昆佑</p>
     </div>

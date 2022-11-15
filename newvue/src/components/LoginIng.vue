@@ -1,25 +1,25 @@
 <template>
   <div id="login">
-    <div class="container nav flex-column justify-content-center">
+    <div class="container nav flex-column justify-content-center loginbox">
       <div class="row">
         <img src="../img/logo.png" class="col-2 offset-5">
         <div class="col-4 offset-4">
           <div class="input-group mb-4" v-if="pd1">
-            <input type="email" class="form-control" placeholder="电子邮件或账户" aria-label="Username"
+            <input type="email" class="form-control input" placeholder="电子邮件或账户" aria-label="Username"
               aria-describedby="basic-addon1" v-model="email">
           </div>
           <div class="input-group mb-4" v-if="!pd1">
-            <input type="email" class="form-control is-invalid" placeholder="电子邮件或账户" aria-label="Username"
+            <input type="email" class="form-control is-invalid input" placeholder="电子邮件或账户" aria-label="Username"
               aria-describedby="basic-addon1" v-model="email">
           </div>
         </div>
         <div class="col-4 offset-4">
           <div class="input-group mb-4" v-if="pd2">
-            <input type="password" class="form-control" placeholder="密码" aria-label="Username"
+            <input type="password" class="form-control input" placeholder="密码" aria-label="Username"
               aria-describedby="basic-addon1" v-model="pw">
           </div>
           <div class="input-group mb-4" v-if="!pd2">
-            <input type="password" class="form-control is-invalid" placeholder="密码" aria-label="Username"
+            <input type="password" class="form-control is-invalid input" placeholder="密码" aria-label="Username"
               aria-describedby="basic-addon1" v-model="pw">
           </div>
         </div>
@@ -59,7 +59,7 @@ export default {
     login: function() {
       if (this.email === "123456789@qq.com") {
         if (this.pw === '123456') {
-          _push(window, "")
+          _push(window, "home")
         } else {
           this.pd2 = false
         }
@@ -71,11 +71,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
 
 #login {
   background-color: #15171e;
+  
 }
 
 img {
@@ -87,7 +88,7 @@ hr {
   border: 1px solid
 }
 
-.login {
+.loginbox {
   height: 100vh;
 }
 
@@ -95,7 +96,7 @@ hr {
   --bs-progress-bg: #3f4147;
 }
 
-.form-control {
+.input {
   background-color: #15171e;
   border-color: #6b6c70;
   color: #ffffff;
@@ -107,12 +108,12 @@ hr {
   color: #0074e0;
 }
 
-.form-control:hover {
+.input:hover {
   border-color: #dadadb;
   color: #ffffff;
 }
 
-.form-control:focus {
+.input:focus {
   background-color: #15171e;
   box-shadow: none;
   border-color: #148eff;
