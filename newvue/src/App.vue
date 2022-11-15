@@ -5,7 +5,7 @@
         <div class="col-1  nav flex-column justify-content-center"><img src="./img/logo2.png"></div>
         <ul class="nav col-8  offset-1">
           <li class="nav-item nav flex-column justify-content-center">
-            <router-link class="nav-link text-light" aria-current="page" to="/home">商店</router-link>
+            <router-link class="nav-link text-light" aria-current="page" to="/home">首页</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
             <a class="nav-link text-light" href="">社群</a>
