@@ -55,7 +55,7 @@ export default {
   name: 'HelloWorld',
   data(){
     return{
-      poster:[require("../img/poster1.png"),require("../img/poster2.png"),require("../img/poster1.png")],
+      poster:[require("../img/poster1.png"),require("../img/poster2.png"),require("../img/poster3.png")],
       game:[{
         game:require("../img/game1.png"),
         text:require("../img/text1.png"),

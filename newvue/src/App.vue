@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed-top head">
+  <div class="fixed-top head" v-if="!(path==='/login')">
     <div class="container">
       <div class="row">
         <img src="" alt="" class="col-2">
@@ -26,7 +26,7 @@
     </div>
   </div>
   <router-view></router-view>
-  <div class="text-center foot">
+  <div class="text-center foot" v-if="!(path==='/login')">
       <img src="" alt="">
       <p>@梁友欢/林泽铨/李西东/邬昆佑</p>
     </div>
@@ -36,6 +36,19 @@
 
 export default {
   name: 'App',
+  data(){
+    return{
+      path:'',
+    }
+  },
+  mounted(){
+    this.path = this.$route.path
+  },
+  watch:{
+    $route(to){
+      this.path = to.path
+    }
+  }
   
 }
 </script>
