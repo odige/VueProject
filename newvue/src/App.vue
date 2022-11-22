@@ -8,7 +8,7 @@
             <router-link class="nav-link text-light" aria-current="page" to="/home">首页</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" href="">社群</a>
+            <router-link class="nav-link text-light" to="/comment">社群</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
             <a class="nav-link text-light" href="#">关于</a>
