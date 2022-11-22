@@ -9,6 +9,7 @@ import login from '@/components/LoginIng.vue'
 import overview from '@/components/OverView.vue'
 import comment from '@/components/ComMent.vue'
 import error from '@/components/ErrorView.vue'
+import game from '@/components/GameView.vue'
 
 const routes = [{
     path: '/home', name: 'home', component: home
@@ -20,6 +21,8 @@ const routes = [{
     path:'/comment',name:'comment', component: comment
 },{
     path:'/error',name:'error', component: error
+},{
+    path:'/game',name:'game', component:game
 }]
 
 const router = createRouter({

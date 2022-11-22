@@ -111,7 +111,7 @@ export default {
   },
   methods:{
     to:()=>{
-      _push(window, "")
+      _push(window, "game")
     }
   }
 }
