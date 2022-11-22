@@ -40,7 +40,7 @@
             <img :src="item.text" class="card-img-top" alt="">
           </div>
           <div class="card-body">
-            <h4 class="card-text text-center text-light">{{item.name}} </h4>
+            <h4 class="card-text text-center text-light stretched-link">{{item.name}} </h4>
             <p class="card-text type">{{item.type}}</p>
           </div>
         </div>

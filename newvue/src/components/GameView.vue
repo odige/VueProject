@@ -33,7 +33,7 @@
     <div class="row news" style="background-color:#cfdced;">
         <h1 class="text-center my-5">新闻</h1>
         <div class="col-10 mx-auto row mb-5">
-            <div class="card col-3 my-2 position-relative" v-for="item in news" :key="item">
+            <div class="card col-3 my-2" v-for="item in news" :key="item">
                 <img :src="item.img" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title text-white stretched-link">{{ item.title }}</h5>
