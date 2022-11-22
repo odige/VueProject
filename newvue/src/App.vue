@@ -85,4 +85,7 @@ li>a{
 li>a:hover{
   background-color: rgb(48, 58, 80,0.9);
 }
+.stretched-link{
+  cursor:pointer;
+}
 </style>
