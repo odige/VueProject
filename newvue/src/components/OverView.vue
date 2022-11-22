@@ -24,7 +24,7 @@
                 <div class="row">
                     <label class="col-2 offset-1 ">电子邮箱</label>
                     <span class="col-7" v-if="reg[0]">{{ email }}</span>
-                    <button class="col-1 border-0" @click="verify(0)" v-if="reg[0]">更新↗</button>
+                    <button class="col-1 border-0 up" @click="verify(0)" v-if="reg[0]">更新↗</button>
 
                     <div class="col-4 nav flex-column justify-content-center loginbox" v-if="!reg[0]">
                         <input type="email" class="form-control oinput" v-model="remail">
@@ -45,7 +45,7 @@
                 <div class="row">
                     <label class="col-2 offset-1 ">手机号码</label>
                     <span class="col-7" v-if="reg[1]">{{ phone }}</span>
-                    <button class="col-1 border-0" @click="verify(1)" v-if="reg[1]">更新↗</button>
+                    <button class="col-1 border-0 up" @click="verify(1)" v-if="reg[1]">更新↗</button>
 
                     <div class="col-4 nav flex-column justify-content-center loginbox" v-if="!reg[1]">
                         <input type="phone" class="form-control oinput" v-model="rphone">
@@ -66,7 +66,7 @@
                 <div class="row">
                     <label class="col-2 offset-1 ">战网昵称</label>
                     <span class="col-7" v-if="reg[2]">{{ name }}</span>
-                    <button class="col-1 border-0" @click="verify(2)" v-if="reg[2]">更新↗</button>
+                    <button class="col-1 border-0 up" @click="verify(2)" v-if="reg[2]">更新↗</button>
 
                     <div class="col-4 nav flex-column justify-content-center loginbox" v-if="!reg[2]">
                         <input type="name" class="form-control oinput" v-model="rname">
@@ -86,7 +86,7 @@
     </div>
 </template>
 
-<script scoped>
+<script>
 import { _push } from "@/scripts/page";
 export default {
     name: 'OverView',
@@ -129,7 +129,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #overview {
     height: 1200px;
     background-color: #001f4e;
@@ -165,12 +165,12 @@ h1 {
     color: #ffffff;
 }
 
-button {
+.up {
     background-color: rgb(9, 85, 135, 0);
     color: #00aeff;
 }
 
-button:hover {
+.up:hover {
     color: #ffffff;
 }
 
