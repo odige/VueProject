@@ -40,11 +40,30 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body border-secondary">
-
+                    <div class="row">
+                        <div class="form-check col-5 offset-2 my-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="evaluateid" value="0">
+                            <label class="form-check-label text-white" for="flexRadioDefault1">
+                                不推荐
+                            </label>
+                        </div>
+                        <div class="form-check col-5 my-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="evaluateid" value="1">
+                            <label class="form-check-label text-white" for="flexRadioDefault2">
+                                推荐
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label" style="color: #5aa9d6;">你的评论</label>
+                            <textarea class="form-control border-secondary" id="exampleFormControlTextarea1" rows="3" 
+                            style="background-color: #14283f;color: #8c8b8a;" v-model="comment">
+                            </textarea>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer border-secondary">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">提交</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="Submit">提交</button>
                 </div>
             </div>
         </div>
@@ -56,8 +75,10 @@ export default {
     name: 'ComMent',
     data() {
         return {
-            username:"AVA",
-            userid:"#7777",
+            username: "AVA",
+            userid: "#7777",
+            evaluateid:null,
+            comment:"",
             usercomment: [{
                 name: "AkA",
                 id: "#2077",
@@ -193,6 +214,18 @@ export default {
                     this.usercomment[i].evaluate = "此用户推荐此游戏"
                 }
             }
+        },
+        Submit(){
+            let newlist={
+                name:this.username,
+                id:this.userid,
+                evaluateid:this.evaluateid,
+                evaluate:"",
+                comment:this.comment
+            }
+            this.usercomment.unshift(newlist)
+            console.log(newlist.evaluateid)
+            this.refresh()
         }
     },
     mounted() {
@@ -205,7 +238,8 @@ export default {
 h1 {
     color: #ffffff;
 }
-.commenthead{
+
+.commenthead {
     padding-top: 100px;
 }
 
@@ -227,7 +261,8 @@ p {
 h5 {
     color: #5aa9d6;
 }
-.modal-content{
+
+.modal-content {
     background-color: #171d2d;
-}   
+}
 </style>
