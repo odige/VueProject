@@ -8,6 +8,7 @@ import home from '@/components/HelloWorld.vue'
 import login from '@/components/LoginIng.vue'
 import overview from '@/components/OverView.vue'
 import comment from '@/components/ComMent.vue'
+import error from '@/components/ErrorView.vue'
 
 const routes = [{
     path: '/home', name: 'home', component: home
@@ -17,6 +18,8 @@ const routes = [{
     path:'/overview',name:'overview', component: overview
 },{
     path:'/comment',name:'comment', component: comment
+},{
+    path:'/error',name:'error', component: error
 }]
 
 const router = createRouter({

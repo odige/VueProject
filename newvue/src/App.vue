@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed-top head" v-if="!(path==='/')">
+  <div class="fixed-top head" v-if="!(path==='/'||path==='/error')">
     <div class="container">
       <div class="row">
         <div class="col-1  nav flex-column justify-content-center"><img src="./img/logo2.png"></div>
@@ -11,10 +11,10 @@
             <router-link class="nav-link text-light" to="/comment">社群</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" href="#">关于</a>
+            <router-link class="nav-link text-light" to="/error">关于</router-link>
           </li>
           <li class="nav-item nav flex-column justify-content-center">
-            <a class="nav-link text-light" href="#">客服中心</a>
+            <router-link class="nav-link text-light" to="/error">客服中心</router-link>
           </li>
         </ul>
         <ul class="nav col-1 offset-1">
@@ -26,7 +26,7 @@
     </div>
   </div>
   <router-view></router-view>
-  <div class="text-center foot" v-if="!(path==='/')">
+  <div class="text-center foot"  v-if="!(path==='/'||path==='/error')">
       <img src="" alt="">
       <p>@梁友欢/林泽铨/李西东/邬昆佑</p>
     </div>
