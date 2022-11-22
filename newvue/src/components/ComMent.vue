@@ -224,7 +224,7 @@ export default {
                 comment:this.comment
             }
             this.usercomment.unshift(newlist)
-            console.log(newlist.evaluateid)
+            this.comment="",
             this.refresh()
         }
     },
